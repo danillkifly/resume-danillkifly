@@ -1,0 +1,283 @@
+*,
+::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+#bgVideo {
+  position: fixed;
+  top: 7rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -5;
+  filter: blur(5px);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 150px;
+  backdrop-filter: none;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  background-color: rgba(255, 99, 71, 0.9);
+}
+
+.navbar.scrolled {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 99, 71, 0.9);
+}
+
+.nav-links a {
+  position: relative;
+  color: whitesmoke;
+  transition: color 0.3s;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: blueviolet;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover {
+  color: blueviolet;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.logo {
+  color: wheat;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: yellow;
+  cursor: pointer;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 250px;
+  flex-wrap: wrap;
+}
+
+.text-box {
+  max-width: 500px;
+  padding: 30px;
+  background: #00ccf5;
+  border: 8px solid black;
+  box-shadow: 8px 8px 0 black;
+}
+
+.whoami {
+  color: seagreen;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.danill {
+  color: wheat;
+}
+
+.kifly {
+  color: blueviolet;
+}
+
+.roles {
+  margin-top: 15px;
+  color: navy;
+}
+
+.code {
+  margin-top: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+.features {
+  display: flex;
+  gap: 1rem;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardG {
+  background: #00cc44;
+  width: 220px;
+  padding: 1rem;
+  border: 5px solid black;
+  box-shadow: 8px 8px 0 black;
+  text-align: center;
+}
+
+.card p {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.cardO {
+  background: #ff7f00;
+  width: 140px;
+  padding: 1rem;
+  border: 5px solid black;
+  box-shadow: 8px 8px 0 black;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Image Box */
+.photo-box {
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+  border: 6px solid yellow;
+  box-shadow: 6px 6px 0 black;
+}
+
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 15px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #111;
+    padding: 10px;
+    border: 1px solid #00ff88;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero {
+    padding: 100px 20px 0 10px;
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 15px;
+  padding: 15px 20px;
+  box-shadow: 0 5px 0 #000;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.icon img {
+  width: 22px;
+  height: 22px;
+}
+
+.text {
+  flex-grow: 1;
+}
+
+.text h3 {
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #111;
+}
+
+.text p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.arrow {
+  font-size: 1.2em;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
