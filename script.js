@@ -60,3 +60,42 @@ function drawMatrixRain() {
 drawMatrixRain();
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+const typingElement = document.getElementById("typing");
+const words = ["Kifly", "zzzZ"]; // Kata-kata yang ingin ditampilkan
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingSpeed = 150;
+
+function typeEffect() {
+  const currentWord = words[wordIndex];
+  if (isDeleting) {
+    typingElement.textContent = currentWord.substring(0, charIndex--);
+  } else {
+    typingElement.textContent = currentWord.substring(0, charIndex++);
+  }
+
+  if (!isDeleting && charIndex === currentWord.length) {
+    isDeleting = true;
+    typingSpeed = 1000; // waktu jeda setelah selesai ketik
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    wordIndex = (wordIndex + 1) % words.length;
+    typingSpeed = 150;
+  } else {
+    typingSpeed = isDeleting ? 80 : 150;
+  }
+
+  setTimeout(typeEffect, 300);
+}
+
+typeEffect();
+
+const clickSound = document.getElementById("click-sound");
+
+document.addEventListener("click", () => {
+  // Rewind sound to start in case it's still playing
+  clickSound.currentTime = 0;
+  clickSound.play();
+});

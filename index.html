@@ -13,14 +13,18 @@
     />
   </head>
   <body>
+
+    <audio id="click-sound" src="mouse-click.mp3" preload="auto"></audio>
+
     <canvas id="backgroundCanvas"></canvas>
 
     <header class="navbar" id="navbar">
       <div class="logo">Danill Kifly &lt;/&gt;</div>
       <nav class="nav-links" id="navLinks">
         <a href="#home">/home</a>
-        <a href="#about">/about</a>
+        <a href="#work">/work</a>
         <a href="#networks">/networks</a>
+        <a href="#contact">/contact</a>
       </nav>
       <div class="menu-toggle" id="menuToggle">&#9776;</div>
     </header>
@@ -29,7 +33,7 @@
       <div class="text-box">
         <p class="whoami">&lt;/&gt; whoami</p>
         <h1>
-          <span class="danill">Danill</span> <span class="kifly">Kifly</span>
+          <span class="danill">Danill</span> <span class="kifly" id="typing"></span>
         </h1>
         <p class="roles">------------ | ------------ | ------------</p>
         <p class="code">let zzzZ = '******'</p>
@@ -44,13 +48,13 @@
         </div>
       </div>
       <div class="photo-box">
-        <img src="img/p.jpg" alt="Syahrul Niza" />
+        <img src="img/p.jpg" alt="Danill Kifly" />
       </div>
     </section>
 
-    <section id="about" class="about">
+    <section id="work" class="work">
       <div class="judul">
-        <h1>/About Me</h1>
+        <h1>/Work Me</h1>
       </div>
       <div class="github-container">
         <div class="github-profile github-card">
@@ -200,5 +204,8 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
   </body>
 </html>
