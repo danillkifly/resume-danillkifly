@@ -90,6 +90,13 @@ section {
   background: #00ccf5;
   border: 8px solid black;
   box-shadow: 8px 8px 0 black;
+  transition: all 0.3s ease;
+}
+
+.text-box:hover {
+  background: transparent;
+  border: 8px solid yellowgreen;
+  transform: translateY(-7px);
 }
 
 .whoami {
@@ -117,7 +124,7 @@ h1 {
 
 .code {
   margin-top: 15px;
-  color: white;
+  color: darkmagenta;
   font-weight: bold;
 }
 
@@ -136,6 +143,12 @@ h1 {
   border: 5px solid black;
   box-shadow: 7px 7px 0 black;
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.cardG:hover {
+  border: 5px solid hotpink;
+  transform: translateY(-7px);
 }
 
 .card p {
@@ -151,6 +164,12 @@ h1 {
   box-shadow: 7px 7px 0 black;
   text-align: center;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.cardO:hover {
+  border: 5px solid gainsboro;
+  transform: translateY(-7px);
 }
 
 .photo-box {
@@ -289,7 +308,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    padding: 30px 20px 30px 10px;
+    padding: 0 20px 0 10px;
   }
 
   .github-card {
@@ -332,7 +351,9 @@ h1 {
 }
 
 .networks-card:hover {
+  background: transparent;
   transform: translateY(-7px);
+  border: 6px solid gold;
 }
 
 .icon {
@@ -382,6 +403,7 @@ h1 {
   .networks {
     height: fit-content;
   }
+
   .networks-container {
     padding: 0 20px 0 10px;
   }
@@ -396,26 +418,39 @@ h1 {
 }
 
 .contact-container {
-  background-color: gold;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 90%;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  height: 250px;
-  border: 6px solid black;
-  box-shadow: 8px 8px 0 black;
+  gap: 40px;
 }
 
-.contact-container h5 {
+.question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: gold;
+  border: 6px solid black;
+  box-shadow: 8px 8px 0 black;
+  padding: 50px 200px;
+  transition: all 0.3s ease;
+}
+
+.question:hover {
+  border: 6px solid steelblue;
+  background: transparent;
+  transform: translateY(-7px);
+}
+
+.question h5 {
   font-size: 0.9em;
   color: purple;
 }
 
-.contact-container h3 {
-  font-size: 1.2em;
+.question h3 a {
+  color: green;
+}
+
+.question h3:hover {
+  text-decoration: underline royalblue;
 }
 
 .contact-social {
@@ -427,16 +462,39 @@ h1 {
   width: 30px;
 }
 
+@media screen and (max-width: 768px) {
+  .contact-container {
+    padding: 0 20px 0 10px;
+  }
+
+  .question {
+    padding: 20px;
+  }
+}
+
 footer {
+  position: fixed;
+  bottom: 5px;
+  height: 8vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 8vh;
-  border-top: 1px solid black;
 }
 
 .by {
   padding: 10px;
-  border: 5px solid black;
-  box-shadow: 7px 7px 0 black;
+  border: 4px solid black;
+  box-shadow: 6px 6px 0 black;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    bottom: 0;
+  }
+
+  .by {
+    padding: 6px;
+    font-size: 10px;
+  }
 }
