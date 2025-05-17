@@ -48,7 +48,7 @@ function drawMatrixRain() {
     const text = chars[Math.floor(Math.random() * chars.length)];
     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+    if (drops[i] * fontSize > canvas.height && Math.random() > 0.999) {
       drops[i] = 0;
     }
 
@@ -58,3 +58,5 @@ function drawMatrixRain() {
   requestAnimationFrame(drawMatrixRain);
 }
 drawMatrixRain();
+
+document.getElementById("year").textContent = new Date().getFullYear();
