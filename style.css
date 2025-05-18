@@ -275,7 +275,7 @@ h1 {
 .project-card:hover {
   transform: translateY(-7px);
   background-color: transparent;
-  border: 6px solid forestgreen;
+  border: 6px solid blue;
 }
 
 .project-card img {
@@ -298,6 +298,7 @@ h1 {
   font-size: 1.5em;
   cursor: pointer;
   transition: color 0.2s;
+  color: black;
 }
 
 .actions i:hover {
