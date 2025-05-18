@@ -99,3 +99,12 @@ document.addEventListener("click", () => {
   clickSound.currentTime = 0;
   clickSound.play();
 });
+
+// Optional interactivity like opening links or animations
+document.querySelectorAll(".actions .eye").forEach((btn) => {
+  btn.addEventListener("click", () => alert("Preview clicked"));
+});
+
+document.querySelectorAll(".actions .github").forEach((btn) => {
+  btn.addEventListener("click", () => alert("GitHub clicked"));
+});
