@@ -421,6 +421,7 @@ h1 {
 
 .networks {
   padding-top: 80px;
+  height: min-content;
 }
 
 .networks-container {
