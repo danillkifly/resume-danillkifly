@@ -12,6 +12,32 @@
         darkMode: "class",
       };
     </script>
+
+    <style>
+      @keyframes shake-rotate {
+        0%,
+        100% {
+          transform: translateX(0) rotate(0deg);
+        }
+        20% {
+          transform: translateX(-3px) rotate(-5deg);
+        }
+        40% {
+          transform: translateX(3px) rotate(5deg);
+        }
+        60% {
+          transform: translateX(-2px) rotate(-3deg);
+        }
+        80% {
+          transform: translateX(2px) rotate(3deg);
+        }
+      }
+
+      .icon-shake {
+        animation: shake-rotate 1s ease-in-out infinite;
+        display: inline-block;
+      }
+    </style>
   </head>
 
   <body
@@ -22,8 +48,10 @@
       class="fixed top-0 left-0 w-full h-full z-0"
     ></canvas>
 
-    <div class="fixed top-2 left-4 text-sm font-mono">Danill Kifly</div>
-    <div class="fixed top-2 right-4 text-sm font-mono" id="clock">00:00:00</div>
+    <div class="fixed top-2 left-4 text-sm font-mono z-20">Danill Kifly</div>
+    <div class="fixed top-2 right-4 text-sm font-mono z-20" id="clock">
+      00:00:00
+    </div>
     <div class="relative z-10">
       <!-- Bottom Navigation (with dark mode toggle) -->
       <div class="fixed bottom-8 left-0 right-0 flex justify-center z-20">
@@ -61,7 +89,7 @@
               target="_blank"
               class="mt-4 px-4 py-2 border border-gray-400 dark:border-gray-300 rounded-full text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition"
             >
-              📄 Resume / CV
+              <i class="fa-regular fa-file"></i> Resume / CV
             </a>
           </div>
 
@@ -71,25 +99,25 @@
               href="mailto:danillkifly@gmail.com"
               class="bg-red-600 rounded-xl flex justify-center items-center h-40 text-white text-2xl"
             >
-              <i class="fa-regular fa-envelope"></i>
+              <i class="fa-regular fa-envelope icon-shake"></i>
             </a>
             <a
               href="https://instagram.com/danillkifly"
               class="bg-pink-500 rounded-xl flex justify-center items-center h-40 text-white text-2xl"
             >
-              <i class="fab fa-instagram"></i>
+              <i class="fab fa-instagram icon-shake"></i>
             </a>
             <a
               href="https://github.com/danillkifly"
               class="bg-white dark:bg-gray-800 rounded-xl flex justify-center items-center h-40 text-black dark:text-white text-2xl"
             >
-              <i class="fab fa-github"></i>
+              <i class="fab fa-github icon-shake"></i>
             </a>
             <a
               href="https://linkedin.com/in/danillkifly"
               class="bg-blue-600 rounded-xl flex justify-center items-center h-40 text-white text-2xl"
             >
-              <i class="fab fa-linkedin-in"></i>
+              <i class="fab fa-linkedin-in icon-shake"></i>
             </a>
           </div>
         </div>
@@ -100,14 +128,15 @@
             <span class="font-semibold"
               >I'm a four-year Agribusiness student</span
             >
-            at Politeknik Negeri Banyuwangi, driven by my passion for Web
-            Development and UI/UX Design. I love crafting digital experiences
-            through code. While I primarily develop websites with coding, my
-            internship led me to explore no-code tools like Webflow, WordPress,
-            and Framer to complement my development process. In the past, I also
-            took on freelance design projects, working on web content, posters,
-            and other creative assets. Lately, I've also been diving into AI
-            things and always looking for...
+            at Politeknik Negeri Banyuwangi. I am interested in agricultural
+            production and business, and want to develop my knowledge and skills
+            in the field of Agribusiness. Currently, I am focusing on rice and
+            corn production and looking for opportunities to develop the
+            processing of these crops. Outside of my daily activities, I also
+            have a pretty interesting hobby, which is developing websites with
+            coding such as portfolio websites, company profiles and agricultural
+            blogs. Lately, I have also been exploring AI and am always looking
+            for new challenges to further develop my skills.
           </p>
         </div>
 
@@ -118,48 +147,87 @@
           <h2 class="text-xl font-semibold mb-4">Experience</h2>
 
           <div class="flex justify-between items-center mb-4">
-            <div class="flex items-center space-x-3">
-              <img
-                src="img/w3.png"
-                alt="SlabPixel Logo"
-                class="w-10 h-10 rounded-full"
-              />
-              <div>
-                <p class="font-semibold">-------</p>
-                <p class="text-sm text-pink-500">Web Developer Intern</p>
+            <a
+              href="https://bio-danillkifly.vercel.app"
+              target="_blank"
+              class="group flex items-center space-x-3"
+            >
+              <div class="relative w-10 h-10 rounded-full overflow-hidden">
+                <img
+                  src="img/w3.png"
+                  alt="Frontend Website Developer"
+                  class="w-full h-full object-cover group-hover:opacity-0 transition duration-300"
+                />
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 dark:bg-black/40"
+                >
+                  <i
+                    class="fa-solid fa-globe text-black text-xl dark:text-white"
+                  ></i>
+                </div>
               </div>
-            </div>
-            <p class="text-sm text-gray-500">Feb 2025 – Present</p>
+              <div>
+                <p class="font-semibold">Frontend Web Dev.</p>
+                <p class="text-sm text-pink-500">Hobby</p>
+              </div>
+            </a>
+            <p class="text-sm text-gray-500">Oct, 2024 - Present</p>
           </div>
 
           <div class="flex justify-between items-center mb-4">
-            <div class="flex items-center space-x-3">
-              <img
-                src="img/w2.png"
-                alt="Programming Tadulako Logo"
-                class="w-10 h-10 rounded-full"
-              />
+            <a
+              href="pdf/student-poliwangi.pdf"
+              target="_blank"
+              class="group flex items-center space-x-3"
+            >
+              <div class="relative w-10 h-10 rounded-full overflow-hidden">
+                <img
+                  src="img/w2.png"
+                  alt="Student Poliwangi"
+                  class="w-full h-full object-cover group-hover:opacity-0 transition duration-300"
+                />
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 dark:bg-black/40"
+                >
+                  <i
+                    class="fa-regular fa-file text-black text-xl dark:text-white"
+                  ></i>
+                </div>
+              </div>
               <div>
-                <p class="font-semibold">Student at Poliwangi</p>
+                <p class="font-semibold">Student Poliwangi</p>
                 <p class="text-sm text-pink-500">Agribusiness</p>
               </div>
-            </div>
-            <p class="text-sm text-gray-500">Jan 2025 – Present</p>
+            </a>
+            <p class="text-sm text-gray-500">Oct, 2021 - Oct, 2025</p>
           </div>
 
           <div class="flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-              <img
-                src="img/w1.png"
-                alt="Aern Store Logo"
-                class="w-10 h-10 rounded-full bg-pink-100 p-1"
-              />
-              <div>
-                <p class="font-semibold">Internship at PT GMIT</p>
-                <p class="text-sm text-pink-500">as a field assistant</p>
+            <a
+              href="assets/APLIKASI DRONE UNTUK PERHITUNGAN BEDENGAN.pdf"
+              target="_blank"
+              class="group flex items-center space-x-3"
+            >
+              <div class="relative w-10 h-10 rounded-full overflow-hidden">
+                <img
+                  src="img/Internship PT GMIT.jpg"
+                  alt="Internship at PT Gading Mas Indonesia Teguh"
+                  class="w-full h-full object-cover group-hover:opacity-0 transition duration-300"
+                />
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 dark:bg-black/40"
+                >
+                  <i
+                    class="fa-regular fa-file text-black text-xl dark:text-white"
+                  ></i>
+                </div>
               </div>
-            </div>
-            <p class="text-sm text-gray-500">Mar 2023 – Present</p>
+              <div>
+                <p class="font-semibold">Intern at PT GMIT</p>
+                <p class="text-sm text-pink-500">As a field assistant</p>
+              </div>
+            </a>
+            <p class="text-sm text-gray-500">Jul, 2024 - Dec, 2024</p>
           </div>
         </div>
 
