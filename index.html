@@ -52,6 +52,10 @@
     <div class="fixed top-2 right-4 text-sm font-mono z-20" id="clock">
       00:00:00
     </div>
+    <div class="fixed bottom-0 w-full text-pink-300 text-center">
+      don't forget to pray
+    </div>
+
     <div class="relative z-10">
       <!-- Bottom Navigation (with dark mode toggle) -->
       <div class="fixed bottom-8 left-0 right-0 flex justify-center z-20">
@@ -73,20 +77,20 @@
             class="bg-white dark:bg-transparent rounded-xl p-8 flex flex-col items-center text-center transition"
           >
             <img
-              src="img/i.jpg"
+              src="img/Profile danillkifly.jpg"
               alt="Profile"
-              class="rounded-full w-20 h-20 mb-4"
+              class="rounded-full w-20 h-20 mb-4 object-cover"
             />
             <h1 class="text-2xl font-semibold">
               Hi, I'm Danill Kifly. <span class="inline-block">👋</span>
             </h1>
             <p class="text-gray-500 dark:text-gray-300 text-lg mt-2">
-              I build cool websites <br class="hidden md:block" />and designs
-              like this.
+              I collaborate with ChatGPT build cool websites and designs like
+              this.
             </p>
             <a
-              href="resume.pdf"
-              target="_blank"
+              href="assets/Resume CV.pdf"
+              download
               class="mt-4 px-4 py-2 border border-gray-400 dark:border-gray-300 rounded-full text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition"
             >
               <i class="fa-regular fa-file"></i> Resume / CV
@@ -156,7 +160,7 @@
                 <img
                   src="img/w3.png"
                   alt="Frontend Website Developer"
-                  class="w-full h-full object-cover group-hover:opacity-0 transition duration-300"
+                  class="w-full h-full object-cover group-hover:bg-transparent transition duration-300"
                 />
                 <div
                   class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 dark:bg-black/40"
@@ -176,15 +180,15 @@
 
           <div class="flex justify-between items-center mb-4">
             <a
-              href="pdf/student-poliwangi.pdf"
-              target="_blank"
+              href="assets/Resume CV.pdf"
+              download
               class="group flex items-center space-x-3"
             >
               <div class="relative w-10 h-10 rounded-full overflow-hidden">
                 <img
                   src="img/w2.png"
                   alt="Student Poliwangi"
-                  class="w-full h-full object-cover group-hover:opacity-0 transition duration-300"
+                  class="w-full h-full object-cover group-hover:bg-transparent transition duration-300"
                 />
                 <div
                   class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 dark:bg-black/40"
@@ -205,14 +209,14 @@
           <div class="flex justify-between items-center">
             <a
               href="assets/APLIKASI DRONE UNTUK PERHITUNGAN BEDENGAN.pdf"
-              target="_blank"
+              download
               class="group flex items-center space-x-3"
             >
               <div class="relative w-10 h-10 rounded-full overflow-hidden">
                 <img
                   src="img/Internship PT GMIT.jpg"
                   alt="Internship at PT Gading Mas Indonesia Teguh"
-                  class="w-full h-full object-cover group-hover:opacity-0 transition duration-300"
+                  class="w-full h-full object-cover group-hover:bg-transparent transition duration-300"
                 />
                 <div
                   class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 dark:bg-black/40"
@@ -232,7 +236,7 @@
         </div>
 
         <!-- Globe Section -->
-        <div class="bg-white dark:bg-transparent rounded-xl p-4 transition">
+        <div class="bg-transparent rounded-xl p-4 transition">
           <h3 class="text-center text-lg text-gray-400 dark:text-gray-300 mb-2">
             Banyuwangi,
             <span class="text-black dark:text-white font-semibold"
@@ -242,16 +246,21 @@
           <div
             class="w-full aspect-[3/2] md:aspect-[4/2] overflow-hidden rounded-xl"
           >
-            <iframe
-              src="https://my.spline.design/earth-ef42966037ec97b4b7e8bda847a92d5d/"
+            <spline-viewer
               frameborder="0"
               width="100%"
               height="100%"
-            ></iframe>
+              url="https://prod.spline.design/lHWDLWo8b90ST-jt/scene.splinecode"
+            ></spline-viewer>
           </div>
         </div>
       </div>
     </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js"
+    ></script>
 
     <script
       src="https://kit.fontawesome.com/2c1928f692.js"
