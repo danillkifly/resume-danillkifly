@@ -87,3 +87,41 @@ playToggle.addEventListener("click", () => {
   }
   isPlaying = !isPlaying;
 });
+
+const texts = document.querySelectorAll(".hoverText");
+const images = document.querySelectorAll(".hoverImage");
+
+texts.forEach((text, i) => {
+  const img = images[i];
+
+  text.addEventListener("mouseenter", () => {
+    gsap.to(img, {
+      duration: 0.4,
+      opacity: 1,
+      scale: 1,
+      ease: "power2.out",
+    });
+  });
+
+  text.addEventListener("mouseleave", () => {
+    gsap.to(img, {
+      duration: 0.3,
+      opacity: 0,
+      scale: 0.8,
+      ease: "power2.in",
+    });
+  });
+
+  text.addEventListener("mousemove", (e) => {
+    const rect = text.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    gsap.to(img, {
+      x: x + 20,
+      y: y + 20,
+      duration: 0.2,
+      ease: "power2.out",
+    });
+  });
+});

@@ -7,6 +7,8 @@
     <link rel="icon" type="image/jpg" href="img/i.jpg" />
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
     <script>
       tailwind.config = {
         darkMode: "class",
@@ -14,6 +16,10 @@
     </script>
 
     <style>
+      .hover-image {
+        pointer-events: none;
+      }
+
       @keyframes shake-rotate {
         0%,
         100% {
@@ -150,32 +156,34 @@
         >
           <h2 class="text-xl font-semibold mb-4">Experience</h2>
 
-          <div class="flex justify-between items-center mb-4">
-            <a
-              href="https://bio-danillkifly.vercel.app"
-              target="_blank"
-              class="group flex items-center space-x-3"
+          <div class="relative mb-6">
+            <div
+              class="hoverText flex cursor-pointer justify-between items-center"
             >
-              <div class="relative w-10 h-10 rounded-full overflow-hidden">
-                <img
-                  src="img/w3.png"
-                  alt="Frontend Website Developer"
-                  class="w-full h-full object-cover group-hover:bg-transparent transition duration-300"
-                />
-                <div
-                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/80 dark:bg-black/40"
-                >
-                  <i
-                    class="fa-solid fa-globe text-black text-xl dark:text-white"
-                  ></i>
+              <img
+                src="img/w3.png"
+                alt="Gambar"
+                class="w-10 h-10 rounded-full object-cover"
+              />
+              <a
+                href="https://bio-danillkifly.vercel.app"
+                target="_blank"
+                class="group flex items-center space-x-3"
+              >
+                <div>
+                  <p class="font-semibold">Frontend Web Dev.</p>
+                  <p class="text-sm text-gray-500">Hobby</p>
                 </div>
-              </div>
-              <div>
-                <p class="font-semibold">Frontend Web Dev.</p>
-                <p class="text-sm text-gray-500">Hobby</p>
-              </div>
-            </a>
-            <p class="text-sm text-gray-500">Oct, 2024 - Present</p>
+              </a>
+              <p class="text-sm text-gray-500">Oct, 2024 - Present</p>
+            </div>
+
+            <!-- Ini gambar hover-nya, posisinya harus di luar .flex -->
+            <img
+              src="img/w3.png"
+              alt="Hover Gambar"
+              class="hoverImage hover-image absolute top-0 left-0 w-24 md:w-40 opacity-0"
+            />
           </div>
 
           <div class="flex justify-between items-center mb-4">
