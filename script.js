@@ -114,7 +114,7 @@ texts.forEach((text, i) => {
 
   text.addEventListener("mousemove", (e) => {
     const rect = text.getBoundingClientRect();
-    const x = e.clientX - rect.left;
+    const x = e.clientX - rect.right;
     const y = e.clientY - rect.top;
 
     gsap.to(img, {
